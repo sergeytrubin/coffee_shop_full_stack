@@ -1,0 +1,91 @@
+newman
+
+udacity-fsnd-udaspicelatte
+
+□ public
+└ /drinks
+  GET localhost:5000/drinks [200 OK, 1.34KB, 559ms]
+  √  Status code is 200
+  √  value contains drinks array
+
+└ /drinks-detail
+  GET localhost:5000/drinks-detail [401 UNAUTHORIZED, 289B, 509ms]
+  √  Status code is 401
+
+└ /drinks
+  POST localhost:5000/drinks [401 UNAUTHORIZED, 289B, 507ms]
+  √  Status code is 401
+
+└ /drinks/1
+  PATCH localhost:5000/drinks/1 [401 UNAUTHORIZED, 289B, 507ms]
+  √  Status code is 401
+
+└ /drinks/1
+  DELETE localhost:5000/drinks/1 [401 UNAUTHORIZED, 289B, 508ms]
+  √  Status code is 401
+
+□ barista
+└ /drinks
+  GET localhost:5000/drinks [200 OK, 1.34KB, 513ms]
+  √  Status code is 200
+  √  value contains drinks array
+
+└ /drinks-detail
+  GET localhost:5000/drinks-detail [200 OK, 1.64KB, 6.4s]
+  √  Status code is 200
+
+└ /drinks
+  POST localhost:5000/drinks [401 UNAUTHORIZED, 544B, 6.7s]
+  √  Status code is 401
+
+└ /drinks/1
+  PATCH localhost:5000/drinks/1 [401 UNAUTHORIZED, 260B, 6.1s]
+  √  Status code is 401
+
+└ /drinks/1
+  DELETE localhost:5000/drinks/1 [401 UNAUTHORIZED, 260B, 7.7s]
+  √  Status code is 401
+
+□ manager
+└ /drinks
+  GET localhost:5000/drinks [200 OK, 1.34KB, 511ms]
+  √  Status code is 200
+  √  value contains drinks array
+
+└ /drinks-detail
+  GET localhost:5000/drinks-detail [200 OK, 1.64KB, 6.2s]
+  √  Status code is 200
+  √  value contains drinks array
+
+└ /drinks
+  POST localhost:5000/drinks [200 OK, 372B, 7.9s]
+  √  Status code is 200
+
+└ /drinks/1
+  PATCH localhost:5000/drinks/1 [200 OK, 511B, 6.8s]
+  √  Status code is 200
+  √  value contains drinks array
+
+└ /drinks/1
+  DELETE localhost:5000/drinks/1 [200 OK, 217B, 9.4s]
+  √  Status code is 200
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │               15 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │               40 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │               25 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │               20 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 1m 1.8s                                   │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 7.84KB (approx)                          │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 4s [min: 507ms, max: 9.4s, s.d.: 3.4s] │
+└───────────────────────────────────────────────────────────────┘
